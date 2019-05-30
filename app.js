@@ -27,8 +27,10 @@ mongoose
 	.catch((err) => {
 		console.log('ERROR: ', err.message);
 	});
-app.use(bodyParser.urlencoded({ extended: true }));
+
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.locals.moment = require('moment');
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 app.use(flash());
@@ -61,6 +63,10 @@ app.use(indexRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 app.use('/campgrounds', campgroundRoutes);
 
-app.listen(process.env.PORT, process.env.IP, function() {
+// app.listen(process.env.PORT, process.env.IP, function() {
+// 	console.log('The Yelp Camp Server has started!');
+// });
+
+app.listen(3000, function() {
 	console.log('The Yelp Camp Server has started!');
 });
