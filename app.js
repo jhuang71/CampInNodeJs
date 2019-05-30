@@ -18,7 +18,7 @@ var commentRoutes = require('./routes/comments'),
 
 // mongoose.connect('mongodb://localhost/yelp_camp');
 mongoose
-	.connect('mongodb+srv://JayH:1022JIAWEIhuang!@cluster0-p9mck.mongodb.net/test?retryWrites=true&w=majority', {
+	.connect('mongodb+srv://JayH:1022JIAWEIhuang%21@cluster0-p9mck.mongodb.net/test?retryWrites=true&w=majority', {
 		useNewUrlParser: true,
 		useCreateIndex: true
 	})
