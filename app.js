@@ -17,7 +17,7 @@ var commentRoutes = require('./routes/comments'),
 // seedDB();
 
 mongoose
-	.connect('process.env.DATABASEURL', {
+	.connect(process.env.DATABASEURL, {
 		useNewUrlParser: true,
 		useCreateIndex: true
 	})
